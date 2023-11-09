@@ -1,10 +1,14 @@
-import './App.css';
+import React from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import Greetings from './components/Greetings';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Greetings />} />
+      </Routes>
+    </Router>
   );
 }
 
